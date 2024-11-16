@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "commit": "cz"
+    "commit": "cz",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
@@ -13,11 +14,26 @@
     "@biomejs/biome": "1.9.4",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
     "typescript": "^5.6.3"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+
+  "lint-staged": {
+    "*.js": [
+      "biome check",
+      "biome format",
+      "git add"
+    ],
+    "*.ts": [
+      "biome check",
+      "biome format",
+      "git add"
+    ]
   }
 }
