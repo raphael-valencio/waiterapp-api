@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "commit": "cz",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "biome check",
+    "format": "biome format",
+    "build": "tsc",
+    "dev": "nodemon src/index.ts"
   },
   "keywords": [],
   "author": "",
