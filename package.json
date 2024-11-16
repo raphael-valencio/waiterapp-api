@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@biomejs/biome": "1.9.4",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
     "typescript": "^5.6.3"
