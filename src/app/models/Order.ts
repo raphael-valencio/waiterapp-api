@@ -12,6 +12,10 @@ export const Order = model(
       enum: ["WAITING", "IN_PRODUCTION", "DONE"],
       default: "WAITING",
     },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+    },
     products: [
       {
         product: {
